@@ -1,37 +1,29 @@
 Backend
 =======
 
-Prerequisites
+[Requerimientos](https://github.com/AmbulnzLLC/fullstack-challenge/tree/master/backend)
 -------------
 
-* [Git](http://git-scm.com/)
-* [MySQL](https://www.mysql.com/)
+* [Git]
+* [MySQL]
+* [nodejs]
 
-Option one
-* [nodejs](https://nodejs.org/en/)
-* nodejs framework of your choice
+Modelo DB relacional
+-------------------
+![alt text](https://github.com/frann11/backendChallenge-Pizzeria/blob/main/ERD%20model1.png?raw=true)
 
-Option two
-* [Ruby](https://www.ruby-lang.org)
-* Ruby framework of your choice
+Relaciones
+-------------------
+* *clientes* - un cliente puede tener uno o varios pedidos
+* *pedidos* - cada pedido va a poseer un importe total (total) y una determinada cantidad de pizzas 
+* *Pizzas* - cada Pizza va a tener un precio y uno o mas ingredientes
+* *Detalle_Pedidos* - Tabla auxiliar relaciones M:M entre el pedido y las distintas cantidades de pizzas (asi mismo tiene un subtotal y una cantidad por cada tipo de pizza pedida)
+* *Pizza_Ingredientes* - Tabla auxiliar relaciones M:M entre las pizzas y los ingredientes (varias pizzas pueden tener los mismos ingredientes)
 
 
-* You can use any additional libraries you want.
-
-Project description
+Endpoints
 -------------------
 
-**Pizzeria**
-
-This application serves the purpose of exposing a JSON API to be consumed by a frontend client for ordering pizza.
-
-The following entities should be created (including proper relations):
-
-* *pizza* - has a name and price (e.g. Margherita $5, Pepperoni $6, ...)
-* *order* - has items
-* *order item* - has a pizza and quantity
-
-The following endpoints should return a JSON response:
-* `/api/orders` (list of orders)
-* `/api/orders/:id` (details of an individual order)
-* `/api/pizzas` (list of pizzas; see './backend/example-pizzas.json')
+* `/api/orders` 
+* `/api/orders/:id` 
+* `/api/pizzas` 
