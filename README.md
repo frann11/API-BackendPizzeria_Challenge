@@ -4,9 +4,9 @@ Backend
 [Requerimientos](https://github.com/AmbulnzLLC/fullstack-challenge/tree/master/backend)
 -------------
 
-* [Git]
-* [MySQL]
-* [nodejs]
+* Git
+* MySQL
+* Nodejs
 
 Modelo DB relacional
 -------------------
